@@ -21,6 +21,12 @@ img {
     display: block;
 }
 
+/* Icon Utility */
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 /* Utilities */
 .container {
     width: 100%;
@@ -240,6 +246,13 @@ img {
     font-weight: 500;
 }
 
+.skill-card .icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 1rem;
+    /* Color handled by SVG fill */
+}
+
 /* Projects Section */
 .projects-grid {
     display: grid;
@@ -301,6 +314,17 @@ img {
 
 .project-link:hover {
     text-decoration: underline;
+}
+
+.project-link .arrow-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.project-link:hover .arrow-icon {
+    transform: translateX(5px);
 }
 
 /* Contact Section */
@@ -370,6 +394,21 @@ img {
     gap: 1.5rem;
 }
 
-.social-links a:hover {
-    color: var(--color-accent);
+.social-links a {
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.social-links .icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0.7);
+    /* Muting the color initially */
+    transition: var(--transition);
+}
+
+.social-links a:hover .icon {
+    filter: brightness(1);
+    /* Full brightness on hover */
+    transform: translateY(-3px);
 }
